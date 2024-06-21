@@ -5,12 +5,12 @@ from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from app.database.funcs.create_tables import create_tables
 from loader import dp, bot
-from app.handlers.quiz_link import router
+from app.handlers import info, quiz_link
 
 async def main() -> None:
     try:
         await create_tables()
-        dp.include_router(router)
+        dp.include_routers(info.router, quiz_link.router)
         await dp.start_polling(bot)
     except Exception as ex:
         logging.error(ex)
