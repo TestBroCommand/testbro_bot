@@ -21,7 +21,7 @@ pip install -r requirements.txt
 4. Set Up Environment Variables
 testbro_bot/app/utils/.env
 
-API_KEY=our_api_key_here
+API_KEY=our_api_key_here<br>
 BOT_TOKEN=our_bot_token_here
 
 6. Run the Bot
