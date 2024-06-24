@@ -54,7 +54,7 @@ async def send_welcome(message: types.Message, command: CommandObject):
             await add_user.register(userId)
             await add_navigation_quiz.addQuizId(userId, args)  
         else:
-            start_file_path = 'bot/assets/images/bolshe.png'
+            start_file_path = 'assets/images/bolshe.png'
             builder = InlineKeyboardMarkup(
                     inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot/base")]]
                 )
