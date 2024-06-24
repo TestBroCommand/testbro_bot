@@ -13,6 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the bot code
 COPY . .
 
+ENV db_path="."
+ENV TOKEN="7472757134:AAHH3neHCGlOIcPtUgJg_X3Lc2StfnFCIKw"
 
 # Run the bot when the container starts
 CMD ["python", "main.py"]
