@@ -12,7 +12,7 @@ router = Router()
 @router.message(Command('start'))
 async def send_welcome(message: types.Message, command: CommandObject):
     userId = message.from_user.id
-    nachat_file_path = 'bot/assets/images/nachat.png'
+    nachat_file_path = 'assets/images/nachat.png'
     isRegister = await check_register.checkRegister(userId)
     args = command.args
     if isRegister:
