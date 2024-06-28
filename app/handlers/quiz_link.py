@@ -30,7 +30,7 @@ async def send_welcome(message: types.Message, command: CommandObject):
         else:
             start_file_path = 'assets/images/bolshe.png'
             builder = InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot/base")]]
+                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot/base?startapp={args}")]]
                 )
             await message.reply_photo(
                     photo=FSInputFile(start_file_path),
