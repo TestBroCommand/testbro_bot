@@ -18,7 +18,7 @@ async def send_welcome(message: types.Message, command: CommandObject):
     if isRegister:
         if args:
             builder = InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot/base")]]
+                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot?start={args}")]]
             )
             await message.reply_photo(
             photo=FSInputFile(nachat_file_path),
@@ -43,7 +43,7 @@ async def send_welcome(message: types.Message, command: CommandObject):
         if args:
             args = command.args
             builder = InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot/base")]]
+                    inline_keyboard=[[InlineKeyboardButton(text="Запустить QuizBro🔥!", url=f"https://t.me/testquizebro_bot?start={args}")]]
             )
             await message.reply_photo(
             photo=FSInputFile(nachat_file_path),
